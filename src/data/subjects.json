@@ -1,0 +1,27 @@
+[
+    {
+        "url": "url",
+        "thumbnail": "/wallpaper.png",
+        "name": "Maths"
+    },
+    {
+        "url": "url",
+        "thumbnail": "/wallpaper.png",
+        "name": "English"
+    },
+    {
+        "url": "url",
+        "thumbnail": "/wallpaper.png",
+        "name": "Biology"
+    },
+    {
+        "url": "url",
+        "thumbnail": "/wallpaper.png",
+        "name": "Chemistry"
+    },
+    {
+        "url": "url",
+        "thumbnail": "/wallpaper.png",
+        "name": "Government"
+    }
+]
