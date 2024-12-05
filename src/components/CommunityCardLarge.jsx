@@ -6,7 +6,7 @@ const CommunityCard = () => {
   }
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 border-b border-gray-500 py-4">
+    <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4 gap-4 border-b border-gray-500 py-4">
       {communities.map((community, index) => (
         <div key={index}>
           <a
@@ -19,7 +19,7 @@ const CommunityCard = () => {
               <img
                 src={community.img}
                 alt={community.name || "Community"}
-                className="min-w-12 min-h-12 max-w-52 max-h-52 rounded-lg object-cover"
+                className="min-w-12 min-h-12 max-w-36 max-h-36 lg:max-w-52 lg:max-h-52 rounded-lg object-cover"
               />
               <span className="absolute w-2 h-2 -top-0.5 -right-0.5 rounded-full bg-red-500"></span>
             </div>

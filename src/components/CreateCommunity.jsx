@@ -1,5 +1,6 @@
 import { useState, useRef } from "react";
 import { FaImage, FaCode, FaMarkdown, FaPaperPlane } from "react-icons/fa";
+import { PiPencilSimple } from "react-icons/pi";
 
 const QuestionBox = () => {
   const [isPublic, setIsPublic] = useState(true);
@@ -32,16 +33,17 @@ const QuestionBox = () => {
 
   return (
     <div className="bg-gray-900 p-6 rounded-lg shadow-md text-white space-y-4">
-      <div className="flex space-x-4 border-b border-gray-700 pb-2">
-        <button className="text-lg font-semibold text-gray-400">
-          Create Community
+      <div className="flex flex-col space-y-2 border-b border-gray-700 pb-2">
+        <button className="text-xl font-semibold">
+          Create a student community
         </button>
+        <span className="text-gray-200 text-sm text-center">Build a thriving student community and grow together</span>
       </div>
 
       <div className="relative space-y-4">
         <fieldset className="space-y-2 flex flex-col items-center justify-center">
           <button
-            className="w-28 h-28 rounded-full bg-gray-300 dark:bg-gray-700 border border-gray-500 flex items-center justify-center text-gray-600"
+            className="relative w-28 h-28 rounded-full bg-gray-300 dark:bg-gray-700 border border-gray-500 flex items-center justify-center text-gray-600"
             onClick={() => fileInputRef.current.click()}
           >
             {image ? (
@@ -53,6 +55,7 @@ const QuestionBox = () => {
             ) : (
               ""
             )}
+            <PiPencilSimple className="absolute bottom-0 right-0 text-gray-200 bg-gray-700 border border-gray-500 rounded-full p-2 text-4xl"/>
           </button>
           <label className="text-gray-300 font-semibold">Upload Image</label>
           <input
@@ -120,28 +123,14 @@ const QuestionBox = () => {
           )}
         </fieldset>
 
+      </div>
         <button
           onClick={handleSubmit}
-          className="absolute right-3 bottom-3 bg-gray-600 text-white p-2 rounded-full"
+          className="bg-primary w-full text-white py-3 rounded-lg"
           aria-label="Submit"
         >
-          <FaPaperPlane className="text-base" />
+          Create Community
         </button>
-      </div>
-
-      <div className="flex items-center justify-between">
-        <span className="text-gray-400 text-sm">Privacy:</span>
-        <button
-          onClick={() => setIsPublic(!isPublic)}
-          className={`py-1 px-4 rounded-full text-sm font-medium transition ${
-            isPublic
-              ? "bg-green-600 text-white hover:bg-green-700"
-              : "bg-red-600 text-white hover:bg-red-700"
-          }`}
-        >
-          {isPublic ? "Public" : "Private"}
-        </button>
-      </div>
     </div>
   );
 };
