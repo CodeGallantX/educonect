@@ -51,7 +51,9 @@ const Header = () => {
           />
         </div>
         <div className="flex flex-row-reverse lg:flex-row items-center justify-center space-x-6">
+          <a href="/profile">
           <ProfilePic />
+          </a>
           <div className="relative">
             <button
               onClick={toggleNotificationPane}
@@ -72,7 +74,7 @@ const Header = () => {
             <PiGlobeBold className="text-gray-400 hover:text-gray-600 hover:text-white text-2xl md:text-2xl" />
           </a>
         </div>
-        <a href="/edit-profile" className="outline-none hidden lg:block py-3 px-4 md:px-7 bg-primary text-white text-sm font-medium rounded-full transition outline-none">
+        <a href="/profile" className="outline-none hidden lg:block py-3 px-4 md:px-7 bg-primary text-white text-sm font-medium rounded-full transition outline-none">
             Edit Profile
         </a>
       </header>
