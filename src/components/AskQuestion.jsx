@@ -43,7 +43,7 @@ const QuestionBox = () => {
           required
           value={content}
           onChange={(e) => setContent(e.target.value)}
-          placeholder={activeTab === 'question' ? 'Ask your question here...' : 'Write your post here...'}
+          placeholder='Ask your question here...'
           className="w-full bg-gray-800 rounded-md p-4 text-white text-sm border border-gray-600 focus:outline-none focus:ring-1 focus:ring-gray-200 pr-10"
           />
           </fieldset>
