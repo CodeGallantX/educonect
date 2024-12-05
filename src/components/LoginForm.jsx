@@ -16,7 +16,6 @@ const App = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle form submission logic here
     console.log(formData);
   };
 
@@ -69,11 +68,13 @@ const App = () => {
             />
           </fieldset>
 
-          <button className='mt-2 w-full bg-primary text-white transition duration-300 ease-out py-3 rounded-full' type="submit">
-            <a href="/home">
+            
+          <button 
+          onClick={handleSubmit}
+          className='mt-2 w-full bg-primary text-white transition duration-300 ease-out py-3 rounded-full' type="submit">
               Log in
-            </a>
           </button>
+            
           <p className="text-white">Don&apos;t have an account? <a href="/register" className='font-bold underline transition duration-300 ease-in-out'>Sign up</a></p>
         </form>
 
