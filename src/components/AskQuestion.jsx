@@ -7,6 +7,7 @@ const QuestionBox = () => {
   const [content, setContent] = useState('');
 
   const handleSubmit = () => {
+    x=2
     if (content.trim()) {
       console.log(`Submitted: ${content}`);
       setContent('');
@@ -17,49 +18,35 @@ const QuestionBox = () => {
 
   return (
     <div className="bg-gray-900 p-6 rounded-lg shadow-md text-white space-y-4">
-      <div className="flex space-x-4 border-b border-gray-700 pb-2">
+      <div className="flex space-x-4 border-b border-gray-700">
         <button
-          className={`text-lg font-semibold ${activeTab === 'question' ? 'text-gray-200 border-b-2 border-gray-300' : 'text-gray-400'}`}
-          onClick={() => setActiveTab('question')}
+          className='text-lg font-semibold text-gray-400 pb-2 text-gray-400'
         >
-          Add Question
-        </button>
-        <button
-          className={`text-lg font-semibold ${activeTab === 'post' ? 'text-gray-200 border-b-2 border-gray-300' : 'text-gray-400'}`}
-          onClick={() => setActiveTab('post')}
-        >
-          Create Post
+          Ask Question
         </button>
       </div>
 
-      <div className="text-sm text-gray-400">
-        {activeTab === 'question' ? (
-          <>
-            <strong>Tips for asking good questions:</strong>
-            <ul className="list-disc ml-6 mt-2 space-y-1">
-              <li>Provide clear and specific details about your problem.</li>
-              <li>Keep your question concise and focused on a single topic.</li>
-            </ul>
-          </>
-        ) : (
-          <>
-            <strong>Guidelines for creating posts:</strong>
-            <ul className="list-disc ml-6 mt-2 space-y-1">
-              <li>Ensure your content is relevant and adds value to the community.</li>
-              <li>Use appropriate language and avoid offensive terms.</li>
-            </ul>
-          </>
-        )}
-      </div>
 
-      <div className="relative">
+      <div className="relative space-y-4">
+        <fieldset className="space-y-1">
+          <label className="text-gray-300 font-semibold">Topic <span className="text-red-500 font-bold">*</span></label>
+          <input required type="text" className="w-full text-[12px] sm:text-sm rounded-md pt-1.5 sm:py-2 px-4 text-gray-800 dark:text-gray-100 bg-gray-200 dark:bg-gray-800 border border-gray-500 focus:outline-none focus:ring-1 light:focus:ring-primary dark:focus:ring-gray-300 transition-all"/>
+        </fieldset>
+        <fieldset className="space-y-1">
+          <label className="text-gray-300 font-semibold">Subject </label>
+          <input type="text" className="w-full text-[12px] sm:text-sm rounded-md pt-1.5 sm:py-2 px-4 text-gray-800 dark:text-gray-100 bg-gray-200 dark:bg-gray-800 border border-gray-500 focus:outline-none focus:ring-1 light:focus:ring-primary dark:focus:ring-gray-300 transition-all"/>
+        </fieldset>
+        <fieldset className="space-y-1">
+          <label className="text-gray-300 font-semibold">Description <span className="text-red-500 font-bold">*</span></label>
         <textarea
           rows="3"
+          required
           value={content}
           onChange={(e) => setContent(e.target.value)}
           placeholder={activeTab === 'question' ? 'Ask your question here...' : 'Write your post here...'}
           className="w-full bg-gray-800 rounded-md p-4 text-white text-sm border border-gray-600 focus:outline-none focus:ring-1 focus:ring-gray-200 pr-10"
-        />
+          />
+          </fieldset>
         <button
           onClick={handleSubmit}
           className="absolute right-3 bottom-3 bg-gray-600 text-white p-2 rounded-full"
@@ -70,14 +57,14 @@ const QuestionBox = () => {
       </div>
 
       <div className="flex items-center justify-between">
-        <span className="text-gray-400 text-sm">Privacy:</span>
+        <span className="text-gray-400">Visibility:</span>
         <button
           onClick={() => setIsPublic(!isPublic)}
           className={`py-1 px-4 rounded-full text-sm font-medium transition ${
             isPublic ? 'bg-green-600 text-white hover:bg-green-700' : 'bg-red-600 text-white hover:bg-red-700'
           }`}
         >
-          {isPublic ? 'Public' : 'Private'}
+          {isPublic ? 'Everyone' : 'Only friends'}
         </button>
       </div>
     </div>
