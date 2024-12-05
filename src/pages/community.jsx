@@ -15,12 +15,12 @@ const App = () => {
         {/* <div className='hidden md:block lg:hidden xl:block lg:col-span-0'>
           <LeftPane />
         </div> */}
-        <div className="md:col-span-3 lg:col-span-4 flex flex-col items-start justify-start space-y-4">
+        <div className="md:col-span-3 lg:col-span-4 flex flex-col items-start justify-start space-y-8">
           <CommunityBox />
           <div>
-            <div>
-              <h1 className="text-2xl text-white font-semibold">Discover Student Communities</h1>
-              <p className="text-lg text-white">Sugested for you</p>
+            <div className="px-2">
+              <h1 className="text-2xl text-white font-bold">Discover Student Communities</h1>
+              <p className="text-lg text-gray-300">Sugested for you</p>
             </div>
           <CommunityCardLarge />
           </div>

@@ -6,24 +6,24 @@ const CommunityCard = () => {
   }
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4 gap-4 border-b border-gray-500 py-4">
-      {communities.map((community, index) => (
+    <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-2 gap-4 border-b border-gray-500 py-4">
+      {communities.slice(0, 4).map((community, index) => (
         <div key={index}>
           <a
             href={community.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex flex-col items-center justify-start w-full space-x-2"
+            className="flex flex-col items-start justify-start w-full space-y-4 bg-gray-900 p-4 rounded-lg"
           >
-            <div className="relative">
+            <div className="flex flex-row items-center justify-start space-x-4">
               <img
                 src={community.img}
                 alt={community.name || "Community"}
-                className="min-w-12 min-h-12 max-w-36 max-h-36 lg:max-w-52 lg:max-h-52 rounded-lg object-cover"
+                className="min-w-12 min-h-12 max-w-24 max-h-24 rounded-lg object-cover"
               />
-              <span className="absolute w-2 h-2 -top-0.5 -right-0.5 rounded-full bg-red-500"></span>
+              <h4 className="text-gray-300 text-sm mt-2 font-semibold text-xl">{community.name}</h4>
             </div>
-            <h4 className="text-gray-300 text-sm mt-2 font-semibold">{community.name}</h4>
+            <p className="text-sm text-gray-400">{community.description}</p>
           </a>
         </div>
       ))}
