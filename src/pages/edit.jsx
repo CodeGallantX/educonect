@@ -4,7 +4,7 @@ import LeftPane from '../components/LeftPane';
 import PostBox from '../components/PostBox';
 import UpvotedPostBox from '../components/UpvotedPostBox';
 import PostCard from '../components/PostCard';
-import AskQuestion from '../components/AskQuestion';
+import Footer from '../components/Footer';
 
 const App = () => {
   return (
@@ -25,12 +25,12 @@ const App = () => {
       </div>
     </div>
     <div className="bg-gray-800 block md:hidden">
-    <HeaderMobile/>
-    <div className="flex flex-col items-start justify-start space-y-4 px-4 md:px-6 mt-6">
-          <PostBox />
-          <UpvotedPostBox />
-          {/* <AskQuestion /> */}
-        </div>
+      <HeaderMobile/>
+      <div className="flex flex-col items-start justify-start space-y-4 px-4 md:px-6 mt-6">
+        <PostBox />
+        <UpvotedPostBox />
+      </div>
+      <Footer />
     </div>
     </div>
   );

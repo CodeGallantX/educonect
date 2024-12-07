@@ -1,10 +1,9 @@
 import Header from '../components/Header';
 import HeaderMobile from '../components/HeaderMobile';
-import LeftPane from '../components/LeftPane';
 import CommunityCardLarge from '../components/CommunityCardLarge';
 import CommunityBox from '../components/CommunityBox';
-import PostCard from '../components/PostCard';
 import CreateCommunity from '../components/CreateCommunity';
+import Footer from '../components/Footer';
 
 const App = () => {
   return (
@@ -12,15 +11,12 @@ const App = () => {
     <div className="bg-gray-800 hidden md:block">
       <Header />
       <div className="mt-6 md:mt-10 grid grid-cols-1 md:grid-cols-5 lg:grid-cols-6 gap-6 px-4 md:px-6 lg:px-10 xl:px-24">
-        {/* <div className='hidden md:block lg:hidden xl:block lg:col-span-0'>
-          <LeftPane />
-        </div> */}
-        <div className="md:col-span-3 lg:col-span-4 flex flex-col items-start justify-start space-y-8">
+        <div className="md:col-span-3 lg:col-span-4 flex flex-col items-start justify-start space-y-12">
           <CommunityBox />
           <div>
-            <div className="px-2">
+            <div id="suggestedCommunities" className="px-2">
               <h1 className="text-2xl text-white font-bold">Discover Student Communities</h1>
-              <p className="text-lg text-gray-300">Sugested for you</p>
+              <p className="text-lg text-gray-300">Suggested for you</p>
             </div>
           <CommunityCardLarge />
           </div>
@@ -31,11 +27,18 @@ const App = () => {
       </div>
     </div>
     <div className="bg-gray-800 block md:hidden">
-    <HeaderMobile/>
-    <div className="flex flex-col items-start justify-start space-y-4 px-4 md:px-6 mt-6">
-          <CommunityBox />
-          <CommunityCardLarge />
+      <HeaderMobile/>
+      <div className="flex flex-col items-start justify-start space-y-4 px-4 mt-6 pb-28">
+        <CommunityBox />
+        <div>
+            <div id="suggestedCommunities" className="px-2">
+              <h1 className="text-xl text-white font-bold">Discover Student Communities</h1>
+              <p className="text-gray-300">Suggested for you</p>
+            </div>
         </div>
+        <CommunityCardLarge />
+      </div>
+      <Footer />
     </div>
     </div>
   );

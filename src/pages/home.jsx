@@ -2,9 +2,11 @@ import Header from '../components/Header';
 import HeaderMobile from '../components/HeaderMobile';
 import LeftPane from '../components/LeftPane';
 import PostBox from '../components/PostBox';
+import SearchBox from '../components/SearchBox';
 import SubjectSlider from '../components/SubjectSlider';
 import PostCard from '../components/PostCard';
 import RightPane from '../components/RightPane';
+import Footer from '../components/Footer';
 
 const App = () => {
   return (
@@ -27,11 +29,12 @@ const App = () => {
     </div>
     <div className="bg-gray-800 block md:hidden">
     <HeaderMobile/>
-    <div className="flex flex-col items-start justify-start space-y-4 px-4 md:px-6 mt-6">
-          <PostBox />
+    <div className="flex flex-col items-start justify-start space-y-4 px-4 md:px-6 mt-6 pb-32">
+          <SearchBox />
           <SubjectSlider />
           <PostCard />
         </div>
+          <Footer />
     </div>
     </div>
   );

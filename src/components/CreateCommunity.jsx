@@ -1,12 +1,9 @@
 import { useState, useRef } from "react";
-import { FaImage, FaCode, FaMarkdown, FaPaperPlane } from "react-icons/fa";
+import { FaPaperPlane } from "react-icons/fa";
 import { PiPencilSimple } from "react-icons/pi";
 
 const QuestionBox = () => {
-  const [isPublic, setIsPublic] = useState(true);
   const [content, setContent] = useState("");
-  const [isFocused, setIsFocused] = useState(false);
-  const [selectedIcon, setSelectedIcon] = useState(null);
   const [image, setImage] = useState(null);
   const fileInputRef = useRef(null);
 
@@ -87,40 +84,8 @@ const QuestionBox = () => {
             value={content}
             onChange={(e) => setContent(e.target.value)}
             placeholder="Describe your community here..."
-            onFocus={() => setIsFocused(true)}
-            onBlur={() => setIsFocused(false)}
             className="w-full bg-gray-800 rounded-md p-4 text-white text-sm border border-gray-600 focus:outline-none focus:ring-1 focus:ring-gray-200"
           />
-          {isFocused && (
-            <div className="flex justify-between items-center mt-2">
-              <div className="flex space-x-4 text-gray-400">
-                <button
-                  className={`p-2 rounded-full hover:bg-gray-600 ${selectedIcon === "image" ? "bg-gray-600" : ""
-                    }`}
-                  onClick={() => {
-                    setSelectedIcon("image");
-                    fileInputRef.current.click();
-                  }}
-                >
-                  <FaImage size={20} />
-                </button>
-                <button
-                  className={`p-2 rounded-full hover:bg-gray-600 ${selectedIcon === "code" ? "bg-gray-600" : ""
-                    }`}
-                  onClick={() => setSelectedIcon("code")}
-                >
-                  <FaCode size={20} />
-                </button>
-                <button
-                  className={`p-2 rounded-full hover:bg-gray-600 ${selectedIcon === "markdown" ? "bg-gray-600" : ""
-                    }`}
-                  onClick={() => setSelectedIcon("markdown")}
-                >
-                  <FaMarkdown size={20} />
-                </button>
-              </div>
-            </div>
-          )}
         </fieldset>
 
       </div>

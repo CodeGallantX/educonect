@@ -1,4 +1,3 @@
-import CommunityCard from './CommunityCard'
 import { FaPlusCircle } from 'react-icons/fa'
 
 const LeftPane = () => {
@@ -13,7 +12,7 @@ const LeftPane = () => {
                 <FaPlusCircle className="text-lg inline-block"/>
                 <span className='text-sm'>Create community</span>
         </a>
-        <a href="/community" className="flex flex-row space-x-2 items-center justify-center text-white light:bg-gray-500 dark:bg-transparent border dark:border-gray-500 py-2 px-3 rounded-full w-full">
+        <a href="#suggestedCommunities" className="flex flex-row space-x-2 items-center justify-center text-white light:bg-gray-500 dark:bg-transparent border dark:border-gray-500 py-2 px-3 rounded-full w-full">
                 <span className='text-sm'>Discover communities</span>
         </a>
     </div>

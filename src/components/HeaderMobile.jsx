@@ -4,7 +4,7 @@ import { FaPlusCircle, FaRegBell } from "react-icons/fa";
 const HeaderMobile = () => {
   return (
     <>
-      <header className="flex flex-row items-center justify-between py-8 px-6">
+      <header className="flex flex-row items-end justify-between py-4 pt-8 px-6">
         <h1 className="font-bold text-3xl text-white">Home</h1>
         <div className="flex flex-row items-center space-x-3">
           <a href="/add">

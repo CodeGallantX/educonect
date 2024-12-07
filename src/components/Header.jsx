@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import ProfilePic from "./ProfilePic";
 import NotificationPane from "./NotificationPane"; // Import the NotificationPane component
 import { FaRegBell } from "react-icons/fa6";
