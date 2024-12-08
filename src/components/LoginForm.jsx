@@ -1,10 +1,15 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+
 const App = () => {
   const [formData, setFormData] = useState({
     email: '',
     password: '',
     agree: false,
   });
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState('');
+  const navigate = useNavigate();
 
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
@@ -14,9 +19,28 @@ const App = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(formData);
+    setError('');
+    
+    if (!formData.email || !formData.password) {
+      setError('Please fill in all required fields.');
+      return;
+    }
+
+    setIsLoading(true);
+
+    // Simulate API call
+    setTimeout(() => {
+      setIsLoading(false);
+
+      if (formData.email === 'test@mail.com' && formData.password === 'password') {
+        console.log('Login successful!');
+        navigate('/home');
+      } else {
+        setError('Invalid email or password. Please try again.');
+      }
+    }, 2000);
   };
 
   return (
@@ -24,7 +48,6 @@ const App = () => {
       <div className="flex flex-col text-white space-y-3 px-10 md:px-16 lg:px-10 xl:px-24 py-16">
         <h1 className='text-4xl font-bold text-center'>Login</h1>
         <p className="text-gray-300 text-center">Join the community and unlock your learning potential</p>
-
 
         <div className='mt-4 w-full'>
           <div className="flex flex-col items-center justify-center space-y-4">
@@ -41,6 +64,10 @@ const App = () => {
         </div>
 
         <form onSubmit={handleSubmit} className='flex flex-col space-y-3 lg:space-y-4 mt-4'>
+          {error && (
+            <p className="text-red-500 text-center">{error}</p>
+          )}
+
           <fieldset className="flex flex-col items-start justify-center w-full space-y-1">
             <label className='text-white' htmlFor="email">Email Address</label>
             <input
@@ -68,16 +95,16 @@ const App = () => {
             />
           </fieldset>
 
-            
-          <button 
-          onClick={handleSubmit}
-          className='mt-2 w-full bg-primary text-white transition duration-300 ease-out py-3 rounded-full' type="submit">
-              Log in
+          <button
+            className='mt-2 w-full bg-primary text-white transition duration-300 ease-out py-3 rounded-full'
+            type="submit"
+            disabled={isLoading}
+          >
+            {isLoading ? "Logging in..." : "Log in"}
           </button>
-            
+
           <p className="text-white">Don&apos;t have an account? <a href="/register" className='font-bold underline transition duration-300 ease-in-out'>Sign up</a></p>
         </form>
-
       </div>
       <div className='hidden overflow-hidden lg:block ml-auto lg:w-5/6 xl:w-11/12 relative h-full bg-gradient-to-tr from-cyan-800 to-purple-900'>
         <div className='absolute bottom-0 w-full opacity-40 h-2/5 bg-black blur'></div>

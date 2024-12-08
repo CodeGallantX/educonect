@@ -1,5 +1,4 @@
 import { useState, useRef } from "react";
-import { FaPaperPlane } from "react-icons/fa";
 import { PiPencilSimple } from "react-icons/pi";
 
 const QuestionBox = () => {
