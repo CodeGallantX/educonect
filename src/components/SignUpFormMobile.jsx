@@ -26,14 +26,14 @@ const App = () => {
 
   return (
     <div className='lg:grid lg:grid-cols-2 light:bg-gray-200 dark:bg-gray-800 w-full min-h-screen'>
-      <div className="relative flex flex-col px-10 md:px-16 lg:px-10 xl:px-32 pb-10 pt-20">
+      <div className="relative flex flex-col px-10 md:px-16 lg:px-10 xl:px-32 pb-10 pt-14">
         <h1 className='text-3xl font-bold text-left light:text-gray-800 dark:text-white'>Register To Start Your Journey To EduConnect Today</h1>
 
         <a href="/">
-            <FaAngleLeft className="absolute left-9 top-5 p-2 light:bg-gray-500 dark:bg-gray-700 rounded-full text-4xl light:text-gray-500 dark:text-white font-bold"/>
+            <FaAngleLeft className="absolute left-8 top-5 p-2 light:bg-gray-500 dark:bg-gray-700 rounded-full text-4xl light:text-gray-500 dark:text-white font-bold"/>
         </a>
 
-        <form onSubmit={handleSubmit} className='flex flex-col light:text-gray-800 dark:text-white space-y-3 lg:space-y-4 mt-10'>
+        <form onSubmit={handleSubmit} className='flex flex-col light:text-gray-800 dark:text-white space-y-4 mt-4'>
           <fieldset className="flex flex-col w-full  items-start justify-center space-y-1">
             <label className='' htmlFor="name">Name</label>
             <input

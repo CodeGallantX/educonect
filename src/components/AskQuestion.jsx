@@ -30,11 +30,11 @@ const QuestionBox = () => {
       <div className="relative space-y-4">
         <fieldset className="space-y-1">
           <label className="text-gray-300 font-semibold">Topic <span className="text-red-500 font-bold">*</span></label>
-          <input required type="text" className="w-full text-[12px] sm:text-sm rounded-md pt-1.5 sm:py-2 px-4 text-gray-800 dark:text-gray-100 bg-gray-200 dark:bg-gray-800 border border-gray-500 focus:outline-none focus:ring-1 light:focus:ring-primary dark:focus:ring-gray-300 transition-all"/>
+          <input required type="text" className="w-full text-[12px] sm:text-sm rounded-md pt-1.5 sm:py-2 px-4   text-gray-100 bg-gray-800 border border-gray-500 focus:outline-none focus:ring-1 focus:ring-gray-300 transition-all"/>
         </fieldset>
         <fieldset className="space-y-1">
           <label className="text-gray-300 font-semibold">Subject </label>
-          <input type="text" className="w-full text-[12px] sm:text-sm rounded-md pt-1.5 sm:py-2 px-4 text-gray-800 dark:text-gray-100 bg-gray-200 dark:bg-gray-800 border border-gray-500 focus:outline-none focus:ring-1 light:focus:ring-primary dark:focus:ring-gray-300 transition-all"/>
+          <input type="text" className="w-full text-[12px] sm:text-sm rounded-md pt-1.5 sm:py-2 px-4 text-gray-100 bg-gray-800 border border-gray-500 focus:outline-none focus:ring-1 focus:ring-gray-300 transition-all"/>
         </fieldset>
         <fieldset className="space-y-1">
           <label className="text-gray-300 font-semibold">Description <span className="text-red-500 font-bold">*</span></label>

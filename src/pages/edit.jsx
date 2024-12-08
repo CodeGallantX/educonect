@@ -3,7 +3,8 @@ import HeaderMobile from '../components/HeaderMobile';
 import LeftPane from '../components/LeftPane';
 import PostBox from '../components/PostBox';
 import UpvotedPostBox from '../components/UpvotedPostBox';
-import PostCard from '../components/PostCard';
+import AskQuestion from '../components/AskQuestion';
+// import PostCard from '../components/PostCard';
 import Footer from '../components/Footer';
 
 const App = () => {

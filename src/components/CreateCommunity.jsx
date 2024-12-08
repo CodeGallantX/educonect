@@ -40,7 +40,7 @@ const QuestionBox = () => {
       <div className="relative space-y-4">
         <fieldset className="space-y-2 flex flex-col items-center justify-center">
           <button
-            className="relative w-28 h-28 rounded-full bg-gray-300 dark:bg-gray-700 border border-gray-500 flex items-center justify-center text-gray-600"
+            className="relative w-28 h-28 rounded-full bg-gray-700 border border-gray-500 flex items-center justify-center text-gray-600"
             onClick={() => fileInputRef.current.click()}
           >
             {image ? (
@@ -70,7 +70,7 @@ const QuestionBox = () => {
           </label>
           <input
             type="text"
-            className="w-full text-[12px] sm:text-sm rounded-md pt-1.5 sm:py-2 px-4 text-gray-800 dark:text-gray-100 bg-gray-200 dark:bg-gray-800 border border-gray-500 focus:outline-none focus:ring-1 light:focus:ring-primary dark:focus:ring-gray-300 transition-all"
+            className="w-full text-[12px] sm:text-sm rounded-md pt-1.5 sm:py-2 px-4 text-gray-100 bg-gray-800 border border-gray-500 focus:outline-none focus:ring-1 focus:ring-gray-300 transition-all"
             
           />
         </fieldset>

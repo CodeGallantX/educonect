@@ -24,22 +24,22 @@ const EmailVerification = () => {
 
   return (
     <div className='light:bg-gray-100 dark:bg-gray-800 w-full min-h-screen'>
-      <div className="relative flex flex-col px-10 md:px-16 lg:px-10 xl:px-32 py-12 lg:py-8">
+      <div className="relative flex flex-col px-10 md:px-16 lg:px-10 xl:px-32 py-12 pt-20">
         <h1 className='text-2xl font-bold text-left dark:text-white light:text-gray-800'>Enter the verification code we sent to your email.</h1>
 
-        <a href="/">
-            <FaAngleLeft className="absolute left-9 top-5 p-2 light:bg-gray-500 dark:bg-gray-700 rounded-full text-4xl light:text-gray-500 dark:text-white font-bold"/>
+        <a href="/register">
+            <FaAngleLeft className="absolute left-9 top-5 p-2 light:bg-gray-500 dark:bg-gray-700 rounded-full text-4xl light:text-gray-100 dark:text-white font-bold"/>
         </a>
 
-        <form onSubmit={handleSubmit} className='flex flex-col space-y-4 mt-14'>
+        <form onSubmit={handleSubmit} className='flex flex-col space-y-4 mt-10'>
           <fieldset className="flex flex-col items-start justify-center space-y-3">
             <label className='text-left text-lg dark:text-white light:text-gray-800' htmlFor="otp">Verification Code</label>
-            <div className="flex space-x-4">
+            <div className="flex flex-row items-center space-x-5">
               {otp.map((digit, index) => (
                 <input
                   key={index}
                   id={`otp-${index}`}
-                  className="w-14 h-14 overflow-hidden text-center text-xl font-semibold border border-solid p-4 rounded-md light:bg-gray-100 dark:bg-gray-800 border-gray-500 outline-none dark:focus:border-gray-200 light:focus:border-primary transition-all duration-300 ease-in-out light:text-gray-400 dark:text-white"
+                  className="min-w-12 max-w-16 min-h-12 max-h-16 overflow-hidden text-center text-xl font-semibold border border-solid p-4 rounded-md light:bg-gray-100 dark:bg-gray-800 border-gray-500 outline-none dark:focus:border-gray-200 light:focus:border-primary transition-all duration-300 ease-in-out light:text-gray-400 dark:text-white"
                   type="tel"
                   maxLength={1}
                   value={digit}
@@ -58,7 +58,7 @@ const EmailVerification = () => {
 
           <p className="text-sm text-center dark:text-gray-200 light:text-gray-600">
             Didn&apos;t receive a code yet?{' '}
-            <a href="/forgot-password" className="font-semibold">
+            <a href="/email-verification" className="font-semibold">
                 Resend
             </a>
           </p>
