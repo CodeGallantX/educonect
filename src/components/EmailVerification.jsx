@@ -9,12 +9,39 @@ const EmailVerification = () => {
   const handleChange = (e, index) => {
     const value = e.target.value;
     const updatedOtp = [...otp];
-    updatedOtp[index] = value.slice(0, 1); 
-    setOtp(updatedOtp);
 
-    if (value && index < otp.length - 1) {
-      const nextInput = document.getElementById(`otp-${index + 1}`);
-      nextInput?.focus();
+    if (value) {
+      updatedOtp[index] = value.slice(0, 1);
+      setOtp(updatedOtp);
+
+      if (index < otp.length - 1) {
+        const nextInput = document.getElementById(`otp-${index + 1}`);
+        nextInput?.focus();
+      }
+    } else {
+      if (e.key === "Backspace" && updatedOtp[index] === "") {
+        updatedOtp[index] = "";
+        setOtp(updatedOtp);
+
+        if (index > 0) {
+          const prevInput = document.getElementById(`otp-${index - 1}`);
+          prevInput?.focus();
+        }
+      }
+    }
+  };
+
+  const handleKeyDown = (e, index) => {
+    if (e.key === "Backspace" && otp[index] === "") {
+      // Handle backspace logic
+      const updatedOtp = [...otp];
+      updatedOtp[index] = "";
+      setOtp(updatedOtp);
+
+      if (index > 0) {
+        const prevInput = document.getElementById(`otp-${index - 1}`);
+        prevInput?.focus();
+      }
     }
   };
 
@@ -22,9 +49,7 @@ const EmailVerification = () => {
     e.preventDefault();
     const otpValue = otp.join('');
 
-    // Mock verification logic
-    if (otpValue === "12345") { // Replace "12345" with the actual verification logic
-      console.log("OTP verified successfully:", otpValue);
+    if (otpValue === "12345") { // Replace with actual verification logic
       navigate('/home');
     } else {
       alert("Invalid OTP. Please try again.");
@@ -32,7 +57,6 @@ const EmailVerification = () => {
   };
 
   const handleResend = () => {
-    console.log("Resending OTP...");
     alert("A new verification code has been sent to your email.");
   };
 
@@ -44,7 +68,7 @@ const EmailVerification = () => {
         </h1>
 
         <a href="/register">
-          <FaAngleLeft className="absolute left-9 top-5 p-2 light:bg-gray-500 dark:bg-gray-700 rounded-full text-4xl light:text-gray-100 dark:text-white font-bold"/>
+          <FaAngleLeft className="absolute left-9 top-5 p-2 light:bg-gray-500 dark:bg-gray-700 rounded-full text-4xl light:text-gray-100 dark:text-white font-bold" />
         </a>
 
         <form onSubmit={handleSubmit} className='flex flex-col space-y-4 mt-10'>
@@ -62,6 +86,7 @@ const EmailVerification = () => {
                   maxLength={1}
                   value={digit}
                   onChange={(e) => handleChange(e, index)}
+                  onKeyDown={(e) => handleKeyDown(e, index)}
                   required
                 />
               ))}
