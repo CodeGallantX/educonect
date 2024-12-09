@@ -1,10 +1,14 @@
 import { useState, useRef } from "react";
+import { useNavigate } from "react-router-dom";
 import { PiPencilSimple } from "react-icons/pi";
+import { FaAngleLeft } from "react-icons/fa6";
 
 const QuestionBox = () => {
   const [content, setContent] = useState("");
   const [image, setImage] = useState(null);
   const fileInputRef = useRef(null);
+
+  const navigate = useNavigate();
 
   const handleImageChange = (e) => {
     const file = e.target.files[0];
@@ -29,6 +33,9 @@ const QuestionBox = () => {
 
   return (
     <div className="bg-gray-900 p-6 flex flex-col items-center justify-center min-h-screen text-white space-y-4">
+      <button onClick={() => (navigate('/community'))}>
+          <FaAngleLeft className="absolute left-8 top-6 p-2 light:bg-gray-500 dark:bg-gray-700 rounded-full text-4xl light:text-gray-500 dark:text-white font-bold" />
+        </button>
       <div className="flex flex-col space-y-2 border-b border-gray-700 pb-2">
         <button className="text-xl font-semibold">
           Create a student community
