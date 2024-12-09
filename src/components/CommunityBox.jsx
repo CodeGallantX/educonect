@@ -5,10 +5,10 @@ const LeftPane = () => {
     <div className="p-4 sm:p-8 bg-gray-900 rounded-lg text-left text-white space-y-6 w-full">
       <div className="space-y-2">
       <h2 className="text-2xl font-semibold text-white">Welcome to Community</h2>
-      <p classsName="text-sm">Join a community for peer learning and resources sharing</p>
+      <p className="text-sm">Join a community for peer learning and resources sharing</p>
       </div>
     <div className="flex flex-row items-start sm:items-center justify-start w-full space-x-3 sm:space-x-5 w-3/4 lg:w-2/3 xl:w-1/2">
-    <a href="/create-community" className="flex flex-row space-x-2 items-center justify-center text-white bg-transparent border border-gray-500 py-2 px-3 rounded-full w-4/5 sm:w-full">
+    <a href="/create-community" className="flex flex-col sm:flex-row space-y-2 w-full sm:w-auto sm:space-x-2 items-start sm:items-center justify-center text-white bg-transparent border border-gray-500 py-2 px-3 rounded-full w-4/5 sm:w-full">
                 <FaPlusCircle className="text-lg inline-block"/>
                 <span className='text-sm'>Create community</span>
         </a>
