@@ -144,7 +144,7 @@ const App = () => {
           <img
             src="https://assets.lummi.ai/assets/QmXuxZu9J6Nxum9JTPPNd52SQgdBAm1UknGxJFq9gq4fKN?auto=format&w=1500"
             alt="Students studying"
-            className="w-full h-full object-cover"  // Ensure responsive image fitting
+            className="w-full h-full object-cover"
           />
           <div className="absolute text-white w-full bottom-10 xl:bottom-1/4 translate-y-0 xl:translate-y-14 left-1/2 -translate-x-1/2">
             <div className="flex flex-col space-y-5 items-center text-center px-6">
