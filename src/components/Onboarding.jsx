@@ -11,12 +11,12 @@ const Onboarding = () => {
                     className='absolute w-full h-full object-cover object-left z-0'
                     alt="Onboarding illustration" />
                 <div className='absolute w-full bottom-1/4 translate-y-16 left-1/2 -translate-x-1/2 p-6 pb-2 z-20'>
-                    <div className="flex flex-col space-y-4 items-start text-left text-white">
+                    <div className="flex flex-col space-y-3 items-start text-left text-white">
                         <h1 className="text-2xl font-semibold">Ask Questions with Ease</h1>
                         <p className="text-sm font-light">Post questions in any subject and get clear, reliable answers from students and contributors. Learning starts with a single question.</p>
                     </div>
                 </div>
-            <div className="absolute bottom-6 z-20 flex flex-col items-start w-full justify-center space-y-2 p-6 pb-0">
+            <div className="absolute bottom-8 z-20 flex flex-col items-start w-full justify-center space-y-2 p-6 pb-0">
                 <Link to="/register" className="w-full">
                     <button className='w-full bg-primary text-white text-center py-3 px-4 rounded-lg' type="button">
                         Get started
