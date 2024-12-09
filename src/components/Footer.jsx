@@ -1,5 +1,6 @@
 import { PiHouseBold, PiNotePencilBold } from "react-icons/pi";
 import { IoGridOutline } from "react-icons/io5";
+import ProfilePic from './ProfilePic';
 
 const Footer = () => {
   return (
@@ -23,6 +24,9 @@ const Footer = () => {
             className="text-gray-400 hover:text-gray-600 hover:text-white"
           >
             <IoGridOutline className="text-2xl" />
+          </a>
+          <a href="/profile" className="ml-auto">
+            <ProfilePic />
           </a>
         </nav>
       </footer>

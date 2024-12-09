@@ -17,7 +17,7 @@ const Onboarding = () => {
                         Get started
                     </button>
                 </Link>
-                <p className="w-full text-sm light:text-gray-400 dark:text-white">Already have an account? <Link href="/login" className='font-bold underline transition duration-300 ease-in-out'>Log in</Link></p>
+                <p className="w-full text-sm light:text-gray-400 dark:text-white">Already have an account? <Link to="/login" className='font-bold underline transition duration-300 ease-in-out'>Log in</Link></p>
             </div>
         </div>
     )
