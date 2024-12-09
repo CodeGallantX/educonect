@@ -1,6 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import { PiHouseBold, PiNotePencilBold } from "react-icons/pi";
 import { IoGridOutline } from "react-icons/io5";
+import { FaSignOutAlt } from "react-icons/fa";
 import ProfilePic from './ProfilePic';
 
 const Footer = () => {
@@ -37,7 +38,7 @@ const Footer = () => {
             onClick={() => navigate('/')}
             className="text-gray-400 hover:text-gray-600 hover:text-white"
           >
-            <PiNotePencilBold className="text-2xl" />
+            <FaSignOutAlt className="text-2xl" />
           </button>
         </nav>
       </footer>
