@@ -37,7 +37,7 @@ const ForgotPassword = () => {
   return (
     <div className='light:bg-gray-200 dark:bg-gray-800 w-full h-screen overflow-hidden'>
       <div className="relative flex flex-col space-y-0 px-10 md:px-16 lg:px-20 py-10 pt-20">
-        <div className="">
+        <div className="mb-10">
           <h1 className='text-xl font-bold text-left light:text-gray-800 dark:text-white'>
             Enter the email associated with your account and we&apos;ll send you a reset code.
           </h1>
