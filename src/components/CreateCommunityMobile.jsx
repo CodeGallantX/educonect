@@ -51,7 +51,7 @@ const QuestionBox = () => {
             ) : (
               ""
             )}
-            <PiPencilSimple className="absolute bottom-0 right-0 text-gray-200 bg-gray-700 border border-gray-500 rounded-full p-2 text-4xl"/>
+            <PiPencilSimple className="absolute bottom-0 right-0 text-gray-200 bg-gray-700 border border-gray-500 rounded-full py-3 px-2 text-4xl"/>
           </button>
           <label className="text-gray-300 font-semibold">Upload Image</label>
           <input

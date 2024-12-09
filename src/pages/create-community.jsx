@@ -1,9 +1,9 @@
-import CreateCommunity from '../components/CreateCommunity';
+import CreateCommunityMobile from '../components/CreateCommunityMobile';
 
 const App = () => {
   return (
     <div className="md:hidden block">
-    <CreateCommunity/>
+    <CreateCommunityMobile/>
     </div>
   );
 };
