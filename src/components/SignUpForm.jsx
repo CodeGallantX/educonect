@@ -140,6 +140,11 @@ const App = () => {
 
       <div className="hidden overflow-hidden lg:block ml-auto lg:w-5/6 xl:w-11/12 relative h-full bg-gradient-to-tr from-cyan-800 to-purple-900">
         <div className="absolute bottom-0 w-full opacity-40 h-2/5 bg-black blur"></div>
+        <img
+          src="https://media.istockphoto.com/id/1480342397/photo/students-friends-and-group-studying-with-laptop-at-park-outdoors-education-scholarship.jpg?s=612x612&w=0&k=20&c=DB1MEICuvgvlkJe5p_oIeVcJXD0UTHx9AeLkaOx3XX8="
+          alt="Students studying"
+          className="w-full h-full object-cover"  // Ensure responsive image fitting
+        />
         <div className="absolute text-white w-full bottom-20 xl:bottom-1/4 left-1/2 -translate-x-1/2">
           <div className="flex flex-col space-y-4 items-center text-center px-8">
             <h1 className="text-3xl xl:text-4xl text-white">Ask Questions with Ease</h1>
@@ -150,6 +155,7 @@ const App = () => {
           </div>
         </div>
       </div>
+
     </div>
   );
 };
