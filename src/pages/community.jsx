@@ -3,6 +3,7 @@ import Header from '../components/Header';
 import HeaderMobile from '../components/HeaderMobile';
 import CommunityCardLarge from '../components/CommunityCardLarge';
 import CommunityBox from '../components/CommunityBox';
+import CommunityBoxMobile from '../components/CommunityBoxMobile';
 import CreateCommunity from '../components/CreateCommunity';
 import Footer from '../components/Footer';
 
@@ -53,9 +54,9 @@ const CommunityPage = () => {
       <div className="bg-gray-800 block md:hidden">
         <HeaderMobile />
         <div className="flex flex-col items-start justify-start space-y-4 px-4 mt-6 pb-28">
-          <CommunityBox />
+          <CommunityBoxMobile />
           <div>
-            <div id="suggestedCommunities" className="px-2">
+            <div id="discoveredCommunities" className="px-2 py-4 space-y-1">
               <h1 className="text-xl text-white font-bold">Discover Student Communities</h1>
               <p className="text-gray-300">Suggested for you</p>
             </div>

@@ -10,8 +10,8 @@ const Footer = () => {
 
   return (
     <>
-      <footer className="flex flex-row items-end justify-between space-x-3 py-6 text-white px-10 mx-auto bg-gray-900 fixed bottom-0 w-full">
-        <nav className="md:hidden flex flex-row items-center justify-between space-x-16">
+      <footer className="flex flex-row items-center justify-center space-x-3 py-6 text-white px-4 mx-auto bg-gray-900 fixed bottom-0 w-full">
+        <nav className="md:hidden flex flex-row items-center justify-between space-x-8">
           <a
             href="/home"
             className="text-gray-400 hover:text-gray-600 hover:text-white"
