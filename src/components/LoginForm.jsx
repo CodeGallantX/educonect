@@ -108,7 +108,7 @@ const App = () => {
       </div>
       <div className='p-3'>
         <div className='hidden rounded-lg overflow-hidden lg:block ml-auto lg:w-5/6 xl:w-11/12 relative h-full'>
-          <div className='absolute bottom-0 w-full opacity-70 h-2/5 bg-black blur'></div>
+          <div className='absolute bottom-0 w-full opacity-60 h-2/5 bg-black blur'></div>
           <img 
             className="object-cover w-full h-full" 
             src="https://media.istockphoto.com/id/1307457224/photo/happy-black-student-raising-arm-to-answer-a-questing-in-the-classroom.jpg?s=612x612&w=0&k=20&c=2Z9Q7SE49Xjp3On0SDo20km15bwrifyWdlAMviLuP5I=" 
