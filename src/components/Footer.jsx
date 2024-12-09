@@ -5,7 +5,7 @@ import ProfilePic from './ProfilePic';
 const Footer = () => {
   return (
     <>
-      <footer className="flex flex-row items-end justify-between space-x-3 py-8 text-white px-4 bg-gray-900 fixed bottom-0 w-full">
+      <footer className="flex flex-row items-end justify-between space-x-3 py-6 text-white px-4 bg-gray-900 fixed bottom-0 w-full">
         <nav className="md:hidden flex flex-row items-center justify-center space-x-10">
           <a
             href="/home"

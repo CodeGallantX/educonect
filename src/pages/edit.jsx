@@ -50,7 +50,7 @@ const PostPage = () => {
 
       <div className="bg-gray-800 block md:hidden">
         <HeaderMobile />
-        <div className="flex flex-col items-start justify-start space-y-4 px-4 md:px-6 mt-6">
+        <div className="flex flex-col items-start justify-start space-y-4 px-4 md:px-6 mt-6 pb-28">
           <PostBox />
           <UpvotedPostBox />
         </div>
