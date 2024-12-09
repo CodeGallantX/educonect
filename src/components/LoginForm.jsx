@@ -108,15 +108,15 @@ const App = () => {
       </div>
       <div className='p-3'>
         <div className='hidden rounded-lg overflow-hidden lg:block ml-auto lg:w-5/6 xl:w-11/12 relative h-full'>
-          <div className='absolute bottom-0 w-full opacity-40 h-2/5 bg-black blur'></div>
+          <div className='absolute bottom-0 w-full opacity-70 h-2/5 bg-black blur'></div>
           <img 
             className="object-cover w-full h-full" 
             src="https://media.istockphoto.com/id/1307457224/photo/happy-black-student-raising-arm-to-answer-a-questing-in-the-classroom.jpg?s=612x612&w=0&k=20&c=2Z9Q7SE49Xjp3On0SDo20km15bwrifyWdlAMviLuP5I=" 
             alt="Classroom" 
           />
-          <div className='absolute text-white w-full bottom-1/4 left-1/2 -translate-x-1/2'>
+          <div className='absolute text-white w-full bottom-1/4 translate-y-10 left-1/2 -translate-x-1/2'>
             <div className="flex flex-col space-y-4 items-center text-center px-8">
-              <h1 className="text-4xl text-white">Ask Questions with Ease</h1>
+              <h1 className="text-4xl text-white font-medium">Ask Questions with Ease</h1>
               <p className="text-xl">Post questions in any subject and get clear, reliable answers from students and contributors. Learning starts with a single question.</p>
             </div>
           </div>
