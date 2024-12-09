@@ -41,7 +41,7 @@ const ResetPassword = () => {
       <div className="relative flex flex-col light:text-gray-800 dark:text-white space-y-3 px-10 md:px-16 lg:px-10 xl:px-32 py-10 pt-16">
         <h1 className='text-xl font-bold text-left'>Create a new password to help keep your account safe and secure</h1>
 
-        <button onClick={() => navigate('/')} className="absolute left-9 top-6 p-2 light:bg-gray-800 dark:bg-gray-700 rounded-full text-4xl light:text-gray-100 dark:text-white font-bold">
+        <button onClick={() => navigate('/forgot-password')} className="absolute left-9 top-6 p-2 light:bg-gray-800 dark:bg-gray-700 rounded-full text-4xl light:text-gray-100 dark:text-white font-bold">
           <FaAngleLeft />
         </button>
 
