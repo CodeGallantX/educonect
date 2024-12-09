@@ -2,7 +2,7 @@ import { FaPlusCircle } from 'react-icons/fa'
 
 const LeftPane = () => {
   return (
-    <div className="py-8 px-8 bg-gray-900 rounded-lg text-left text-white space-y-6 w-full">
+    <div className="p-4 sm:p-8 bg-gray-900 rounded-lg text-left text-white space-y-6 w-full">
       <div className="space-y-2">
       <h2 className="text-2xl font-semibold text-white">Welcome to Community</h2>
       <p classsName="text-sm">Join a community for peer learning and resources sharing</p>

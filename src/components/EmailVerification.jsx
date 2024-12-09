@@ -18,30 +18,19 @@ const EmailVerification = () => {
         const nextInput = document.getElementById(`otp-${index + 1}`);
         nextInput?.focus();
       }
-    } else {
-      if (e.key === "Backspace" && updatedOtp[index] === "") {
-        updatedOtp[index] = "";
-        setOtp(updatedOtp);
-
-        if (index > 0) {
-          const prevInput = document.getElementById(`otp-${index - 1}`);
-          prevInput?.focus();
-        }
-      }
     }
   };
 
   const handleKeyDown = (e, index) => {
     if (e.key === "Backspace" && otp[index] === "") {
-      // Handle backspace logic
-      const updatedOtp = [...otp];
-      updatedOtp[index] = "";
-      setOtp(updatedOtp);
-
       if (index > 0) {
         const prevInput = document.getElementById(`otp-${index - 1}`);
         prevInput?.focus();
       }
+    } else if (e.key === "Backspace") {
+      const updatedOtp = [...otp];
+      updatedOtp[index] = "";
+      setOtp(updatedOtp);
     }
   };
 
@@ -50,7 +39,7 @@ const EmailVerification = () => {
     const otpValue = otp.join('');
 
     if (otpValue === "12345") { // Replace with actual verification logic
-      navigate('/home');
+      navigate('/login');
     } else {
       alert("Invalid OTP. Please try again.");
     }
@@ -58,6 +47,7 @@ const EmailVerification = () => {
 
   const handleResend = () => {
     alert("A new verification code has been sent to your email.");
+    // Add resend logic here (e.g., API call to send new OTP)
   };
 
   return (
@@ -67,16 +57,19 @@ const EmailVerification = () => {
           Enter the verification code we sent to your email.
         </h1>
 
-        <a href="/register">
-          <FaAngleLeft className="absolute left-9 top-5 p-2 light:bg-gray-500 dark:bg-gray-700 rounded-full text-4xl light:text-gray-100 dark:text-white font-bold" />
-        </a>
+        <button
+          onClick={() => navigate('/register')}
+          className="absolute left-9 top-5 p-2 light:bg-gray-500 dark:bg-gray-700 rounded-full text-4xl light:text-gray-100 dark:text-white font-bold"
+        >
+          <FaAngleLeft />
+        </button>
 
         <form onSubmit={handleSubmit} className='flex flex-col space-y-4 mt-10'>
           <fieldset className="flex flex-col items-start justify-center space-y-3">
             <label className='text-left text-lg dark:text-white light:text-gray-800' htmlFor="otp">
               Verification Code
             </label>
-            <div className="flex flex-row items-center space-x-5">
+            <div className="flex flex-row items-center space-x-3 sm:space-x-5">
               {otp.map((digit, index) => (
                 <input
                   key={index}
