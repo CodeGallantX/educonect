@@ -9,6 +9,7 @@ const HeaderMobile = () => {
   useEffect(() => {
     switch (location.pathname) {
       case "/":
+      case "/home":
         setCurrentPage("Home");
         break;
       case "/post":
@@ -36,16 +37,16 @@ const HeaderMobile = () => {
           <a href="/add">
             <FaPlusCircle className="text-gray-400 hover:text-gray-600 hover:text-white text-2xl md:text-2xl" />
           </a>
-          <button className="relative focus:outline-none">
+          <a href="/notifications" className="relative focus:outline-none">
             <FaRegBell className="text-gray-400 hover:text-gray-600 hover:text-white text-2xl md:text-2xl" />
             <span className="absolute text-[11px] -top-2 -right-2 rounded-full py-0.5 px-2 bg-red-500 text-white">
               3
             </span>
-          </button>
+          </a>
         </div>
       </div>
       <nav className="mt-2 text-gray-300 text-sm">
-        <Link to="/" className="hover:underline">Home</Link> &gt;{" "}
+        <Link to="/home" className="hover:underline">Home</Link> &gt;{" "}
         <span>{currentPage}</span>
       </nav>
     </header>

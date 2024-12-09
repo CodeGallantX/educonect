@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const App = () => {
   const [formData, setFormData] = useState({
@@ -34,7 +34,7 @@ const App = () => {
     setTimeout(() => {
       setIsLoading(false);
 
-      if (formData.email === 'test@mail.com' && formData.password === 'password') {
+      if (formData.email === 'test@mail.com' && formData.password === 'password123') {
         console.log('Login successful!');
         navigate('/home');
       } else {
@@ -103,7 +103,7 @@ const App = () => {
             {isLoading ? "Logging in..." : "Log in"}
           </button>
 
-          <p className="text-white">Don&apos;t have an account? <a href="/register" className='font-bold underline transition duration-300 ease-in-out'>Sign up</a></p>
+          <p className="text-white">Don&apos;t have an account? <Link to="/register" className='font-bold underline transition duration-300 ease-in-out'>Sign up</Link></p>
         </form>
       </div>
       <div className='hidden overflow-hidden lg:block ml-auto lg:w-5/6 xl:w-11/12 relative h-full bg-gradient-to-tr from-cyan-800 to-purple-900'>

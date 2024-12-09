@@ -1,11 +1,11 @@
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import { FaAngleLeft } from "react-icons/fa6";
 
 const App = () => {
   const [formData, setFormData] = useState({
-    email: '',
-    password: '',
+    userEmail: '',
+    userPassword: '',
   });
   const [errorMessage, setErrorMessage] = useState('');
   const navigate = useNavigate();
@@ -20,14 +20,14 @@ const App = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const { email, password } = formData;
+    const { userEmail, userPassword } = formData;
 
     // Mock authentication logic
-    if (email === 'user@mail.com' && password === 'password123') {
+    if (userEmail === 'test@mail.com' && userPassword === 'password123') {
       setErrorMessage('');
       navigate('/home');
     } else {
-      setErrorMessage('Invalid email or password. Please try again.'); // Set error message
+      setErrorMessage('Invalid email or password. Please try again.');
     }
   };
 
@@ -44,27 +44,27 @@ const App = () => {
 
         <form onSubmit={handleSubmit} className='flex flex-col light:text-gray-800 dark:text-white space-y-3 lg:space-y-4 mt-10'>
           <fieldset className="flex flex-col items-start justify-center space-y-1">
-            <label htmlFor="email">Email Address</label>
+            <label htmlFor="userEmail">Email Address</label>
             <input
               className="w-full border border-solid p-4 rounded-lg border-gray-500 light:bg-gray-200 dark:bg-gray-800 outline-none light:focus:border-primary dark:focus:border-gray-300 transition-all duration-300 ease-in-out light:text-gray-800 dark:text-white"
               type="email"
-              name="email"
-              id="email"
+              name="userEmail"
+              id="userEmail"  
               placeholder='Enter your email address'
-              value={formData.email}
+              value={formData.userEmail} 
               onChange={handleChange}
               required
             />
           </fieldset>
           <fieldset className="flex flex-col items-start justify-center space-y-1">
-            <label htmlFor="password">Password</label>
+            <label htmlFor="userPassword">Password</label>
             <input
               className="w-full placeholder:text-2xl font-light border border-solid p-4 rounded-lg light:bg-gray-200 dark:bg-gray-800 border-gray-500 outline-none light:focus:border-primary dark:focus:border-gray-300 primary transition-all duration-300 ease-in-out light:text-gray-800 dark:text-white"
               type="password"
-              name="password"
-              id="password"
+              name="userPassword" 
+              id="userPassword"  
               placeholder='⁎⁎⁎⁎⁎⁎⁎⁎'
-              value={formData.password}
+              value={formData.userPassword}
               onChange={handleChange}
               required
             />
@@ -93,7 +93,7 @@ const App = () => {
           </div>
           <p className="text-center light:text-gray-800 dark:text-white">
             Don&apos;t have an account yet?{" "}
-            <a href="/register" className='font-bold underline'>Sign up</a>
+            <Link to="/register" className='font-bold underline'>Sign up</Link>
           </p>
         </div>
       </div>
