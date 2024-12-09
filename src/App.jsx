@@ -11,6 +11,7 @@ import ResetPassword from './pages/reset-password';
 import EmailVerification from './pages/email-verification';
 import Onboarding from './pages/onboarding';
 import Notifications from './pages/notifications';
+import Add from './pages/add-question';
 
 const App = () => {
   const navigate = useNavigate();
@@ -55,6 +56,7 @@ const App = () => {
         <Route path="/forgot-password" element={<ForgotPassword />} />
         <Route path="/reset-password" element={<ResetPassword />} />
         <Route path="/email-verification" element={<EmailVerification />} />
+        <Route path="/add" element={<Add />} />
       </Routes>
     </div>
   );
